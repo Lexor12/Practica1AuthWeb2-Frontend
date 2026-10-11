@@ -1,0 +1,29 @@
+<section class="login">
+    <div class="login__formulario">
+        <h2 class="login__titulo">Iniciar Sesión</h2>
+        <form (submit)="iniciarSesion($event)">
+            <div class="login__campo">
+                <label class="login__etiqueta" for="correo">Correo Electrónico:</label>
+                <input class="login__input" type="email" id="correo"
+                    placeholder="correo@ejemplo.com" required
+                    (input)="actualizarEmail($event)">
+            </div>
+            <div class="login__campo">
+                <label class="login__etiqueta" for="contrasena">Contraseña:</label>
+                <input class="login__input" type="password" id="contrasena"
+                    placeholder="contraseña" required
+                    (input)="actualizarPassword($event)">
+            </div>
+            <button class="login__boton-entrar" type="submit">Entrar</button>
+            @if (mensajeError()) {
+                <p class="login__error">{{ mensajeError() }}</p>
+            }
+        </form>
+    </div>
+    <div class="login__divisor"></div>
+    <div class="login__promocion">
+        <h2 class="login__promocion-titulo">¿No tienes una cuenta?</h2>
+        <button class="login__boton-crear" type="button" (click)="crearUsuarioPorDefecto()">Crear</button>
+        <p class="login__promocion-texto">Crea de forma gratuita para empezar a comprar tus bebidas favoritas.</p>
+    </div>
+</section>
