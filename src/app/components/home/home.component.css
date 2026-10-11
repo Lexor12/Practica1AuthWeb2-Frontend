@@ -10,32 +10,32 @@
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.06);
 }
 
-.home__descripcion {
+.home__description {
     flex: 1.4;
     display: flex;
     align-items: center;
 }
 
-.home__titulo {
+.home__title {
     font-size: 24px;
     color: var(--main--heading);
 }
 
-.home__divisor {
+.home__divider {
     width: 1px;
     align-self: stretch;
     background-color: var(--cards--border);
     margin: 0 40px;
 }
 
-.home__acciones {
+.home__actions {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.home__cerrarSesion {
+.home__logout {
     background-color: var(--modal--button-primary-bg);
     color: var(--modal--button-primary-text);
     border: none;
@@ -48,7 +48,7 @@
     transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-.home__cerrarSesion:hover {
+.home__logout:hover {
     transform: scale(1.05);
     opacity: 0.92;
 }
@@ -60,7 +60,7 @@
         margin: 30px 20px;
     }
 
-    .home__divisor {
+    .home__divider {
         width: 100%;
         height: 1px;
         align-self: auto;

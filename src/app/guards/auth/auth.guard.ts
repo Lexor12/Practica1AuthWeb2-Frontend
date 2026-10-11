@@ -11,7 +11,7 @@ export const authGuardGuard: CanActivateFn = (route, state) => {
   //Obtenemos el servicio para la navegacion
   const router = inject(Router)
   //Verificamos si el usuario posee una sesion (Autenticacion)
-  if(authService.estaAutenticado()){
+  if(authService.isAuthenticated()){
     return true;//Si devuelve true es porque permitimos el acceso
   }
   //En caso de que no exista un acceso, lo enviamos a Login

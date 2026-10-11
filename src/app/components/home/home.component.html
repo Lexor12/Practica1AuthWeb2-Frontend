@@ -1,9 +1,11 @@
 <section class="home">
-    <div class="home__descripcion">
-        <h2 class="home__titulo">Bienvenido de nuevo {{ nombre() }}, con rol de {{ rol() }}</h2>
+    <!-- Columna izquierda: mensaje de bienvenida con los datos del usuario -->
+    <div class="home__description">
+        <h2 class="home__title">Bienvenido de nuevo {{ name() }}, con rol de {{ role() }}</h2>
     </div>
-    <div class="home__divisor"></div>
-    <div class="home__acciones">
-        <button class="home__cerrarSesion" type="button" (click)="cerrarSesion()">Cerrar Sesión</button>
+    <div class="home__divider"></div>
+    <!-- Columna derecha: botón para cerrar sesión -->
+    <div class="home__actions">
+        <button class="home__logout" type="button" (click)="logout()">Cerrar Sesión</button>
     </div>
 </section>

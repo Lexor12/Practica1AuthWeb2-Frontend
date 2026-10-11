@@ -10,24 +10,24 @@
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.06);
 }
 
-.login__formulario {
+.login__form {
     flex: 1.4;
     padding-right: 40px;
 }
 
-.login__titulo {
+.login__title {
     font-size: 24px;
     color: var(--main--heading);
     margin-bottom: 25px;
 }
 
-.login__campo {
+.login__field {
     display: flex;
     flex-direction: column;
     margin-bottom: 18px;
 }
 
-.login__etiqueta {
+.login__label {
     font-size: 14px;
     font-weight: 700;
     color: var(--modal--label);
@@ -52,7 +52,7 @@
     border-color: var(--main--accent);
 }
 
-.login__boton-entrar {
+.login__button-enter {
     width: 100%;
     background-color: var(--modal--button-primary-bg);
     color: var(--modal--button-primary-text);
@@ -67,19 +67,19 @@
     transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-.login__boton-entrar:hover {
+.login__button-enter:hover {
     transform: scale(1.05);
     opacity: 0.92;
 }
 
-.login__divisor {
+.login__divider {
     width: 1px;
     align-self: stretch;
     background-color: var(--cards--border);
     margin: 0 40px;
 }
 
-.login__promocion {
+.login__promo {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -88,13 +88,13 @@
     text-align: center;
 }
 
-.login__promocion-titulo {
+.login__promo-title {
     font-size: 22px;
     color: var(--main--heading);
     margin-bottom: 18px;
 }
 
-.login__boton-crear {
+.login__button-create {
     background-color: var(--navbar--button-bg);
     color: var(--navbar--button-text);
     border: none;
@@ -108,12 +108,12 @@
     transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-.login__boton-crear:hover {
+.login__button-create:hover {
     transform: scale(1.05);
     opacity: 0.92;
 }
 
-.login__promocion-texto {
+.login__promo-text {
     font-size: 13px;
     color: var(--main--text);
     max-width: 220px;
@@ -128,13 +128,13 @@
         margin: 30px 20px;
     }
 
-    .login__formulario,
-    .registro__promocion {
+    .login__form,
+    .registro__promo {
         padding-right: 0;
     }
 
-    .login__divisor,
-    .registro__divisor {
+    .login__divider,
+    .registro__divider {
         width: 100%;
         height: 1px;
         align-self: auto;

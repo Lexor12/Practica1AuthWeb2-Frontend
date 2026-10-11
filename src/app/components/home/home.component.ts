@@ -9,18 +9,21 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit{
-  nombre = signal<string>('')
-  rol = signal<string>('')
+  //Datos del usuario que se muestran en el mensaje de bienvenida
+  name = signal<string>('')
+  role = signal<string>('')
 
   constructor(private authService: AuthService, private router: Router) {}
-
+  
+  //ngOnInit se ejecuta una vez al cargar el componente, después del constructor (asi que ya hay injección de dependencias)
+  //aquí leemos los datos guardados del token sí aplica
   ngOnInit(): void {
-    this.nombre.set(this.authService.obtenerNombre() ?? '')
-    this.rol.set(this.authService.obtenerRol() ?? '')
+    this.name.set(this.authService.getName() ?? '')
+    this.role.set(this.authService.getRole() ?? '')
   }
-
-  cerrarSesion(): void {
-    this.authService.cerrarSesion()
+  //Borra la sesión y regresa al login
+  logout(): void {
+    this.authService.logout()
     this.router.navigate(['/login'])
   }
 }

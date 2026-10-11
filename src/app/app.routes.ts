@@ -11,12 +11,13 @@ import { ForbiddenComponent } from './components/forbidden/forbidden.component/f
 import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
-    //Ruta Pública
+    //Ruta Pública: si entran a la raíz, los mandamos al login
     {
         path:'',
         redirectTo:'login',//Significa "si yo busco esta URL, me deberia de mandar al componente si o"
-        pathMatch:'full'
+        pathMatch:'full'//Solo aplica cuando la URL está completamente vacía
     },
+    //Ruta Pública: pantalla de acceso no autorizado
     {   
         path:'forbidden',
         component:ForbiddenComponent
@@ -26,11 +27,11 @@ export const routes: Routes = [
         path:'login',
         component:LoginComponent
     },
-    //Ruta Protegida
+    //Ruta Protegida: pasa primero authGuard y luego roleGuard
     {
         path:'home',
         component:HomeComponent,
         canActivate:[authGuardGuard,roleGuardGuard],
-        data:{ roles: ['admin', 'cajero'] }
+        data:{ roles: ['admin', 'cajero'] }//Roles permitidos; el roleGuard lee esto con route.data['roles']
     }
 ];
