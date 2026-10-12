@@ -36,7 +36,7 @@ export class LoginComponent{
         }
       },
       error: ()=>{
-        this.errorMessage.set('Correo o contraseña incorrectos')
+        this.errorMessage.set('Invalid email or password')
       }
     })
     }
@@ -45,8 +45,8 @@ export class LoginComponent{
   //Botón "Crear", pide al backend que cree los usuarios predefinidos (no manda datos)
   createDefaultUser(){
     this.authservice.register(null).subscribe({
-      next: (res) => alert('Usuario creado'),
-      error: (err) => alert('Error al registrar'),
+      next: (res) => alert('User created'),
+      error: (err) => alert('Error registering'),
     });
   }
 }
