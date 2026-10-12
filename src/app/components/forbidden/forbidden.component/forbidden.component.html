@@ -1,15 +1,15 @@
 <section class="forbidden">
     <div class="forbidden__description">
-        <h2 class="forbidden__title">403 Acceso No Autorizado</h2>
-        <p class="forbidden__text">No puedes acceder a esta dirección.</p>
+        <h2 class="forbidden__title">403 Forbidden</h2>
+        <p class="forbidden__text">You cannot access this address.</p>
     </div>
     <div class="forbidden__divider"></div>
     
     <div class="forbidden__actions">
         @if (hasToken()) {
-            <button class="forbidden__logout" type="button" (click)="logout()">Cerrar Sesión</button>
+            <button class="forbidden__logout" type="button" (click)="logout()">Log out</button>
         } @else {
-            <a [routerLink]="['/login']" routerLinkActive="router-link-active">Ir al Login</a>
+            <a [routerLink]="['/login']" routerLinkActive="router-link-active">Go to Login</a>
         }
     </div>
 </section>

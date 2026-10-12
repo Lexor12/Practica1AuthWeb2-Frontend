@@ -2,23 +2,23 @@
 <section class="login">
     <!-- Columna izquierda: formulario de inicio de sesión -->
     <div class="login__form">
-        <h2 class="login__title">Iniciar Sesión</h2>
+        <h2 class="login__title">Log in</h2>
         <!-- (submit) llama a signIn() al presionar Entrar -->
         <form (submit)="signIn($event)">
             <div class="login__field">
-                <label class="login__label" for="email">Correo Electrónico:</label>
+                <label class="login__label" for="email">Email:</label>
                 <!-- (input) se dispara en cada tecla y guarda el valor en el signal -->
                 <input class="login__input" type="email" id="email"
-                    placeholder="correo@ejemplo.com" required
+                    placeholder="email@email.com" required
                     (input)="updateEmail($event)">
             </div>
             <div class="login__field">
-                <label class="login__label" for="password">Contraseña:</label>
+                <label class="login__label" for="password">Password:</label>
                 <input class="login__input" type="password" id="password"
-                    placeholder="contraseña" required
+                    placeholder="password123" required
                     (input)="updatePassword($event)">
             </div>
-            <button class="login__button-enter" type="submit">Entrar</button>
+            <button class="login__button-enter" type="submit">Enter</button>
             <!-- @if: el error solo aparece cuando errorMessage tiene texto -->
             @if (errorMessage()) {
                 <p class="login__error">{{ errorMessage() }}</p>
@@ -29,8 +29,8 @@
     <div class="login__divider"></div>
     <!-- Columna derecha: crear los usuarios predefinidos -->
     <div class="login__promo">
-        <h2 class="login__promo-title">¿No tienes una cuenta?</h2>
-        <button class="login__button-create" type="button" (click)="createDefaultUser()">Crear</button>
-        <p class="login__promo-text">Crea de forma gratuita para empezar a comprar tus bebidas favoritas.</p>
+        <h2 class="login__promo-title">Don't have an account?</h2>
+        <button class="login__button-create" type="button" (click)="createDefaultUser()">Sign up</button>
+        <p class="login__promo-text">Create one for free to start buying your favorite drinks.</p>
     </div>
 </section>
