@@ -15,6 +15,9 @@
     display: flex;
     align-items: center;
 }
+.forbidden__text{
+    margin-left: auto;
+}
 
 .forbidden__title {
     font-size: 24px;
